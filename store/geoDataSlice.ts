@@ -6,7 +6,7 @@ export interface IGeoDataState {
 }
 
 const initialState: IGeoDataState = {
-    geoDataState: false,
+    geoDataState: JSON,
 };
 
 export const geoDataSlice = createSlice({

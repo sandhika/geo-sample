@@ -10,7 +10,11 @@ import {
     Text } from '@mantine/core';
 import { Navbar } from '../Navbar/Navbar';
 
-const RootLayout = ({ children }) => {
+interface rootProps {
+    children:any
+}
+
+const RootLayout = ({ children }: rootProps) => {
     const [opened, { toggle }] = useDisclosure();
     return (
         <AppShell

@@ -49,7 +49,7 @@ function GeoMapPage() {
       </Flex>
 
       {file && (
-        <Text size="sm" align="center" mt="sm">
+        <Text size="sm" mt="sm">
           Picked file: {file.name}
         </Text>
       )}
