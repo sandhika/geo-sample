@@ -1,7 +1,9 @@
-# Mantine Next.js template
+# Sample GeoData JSON using Map Libre in Mantine Next.js 
 
 This is a template for [Next.js](https://nextjs.org/) pages router + [Mantine](https://mantine.dev/).
 If you want to use app router instead, see [next-app-template](https://github.com/mantinedev/next-app-template).
+
+Demo you can see [GeoMS](https://geo-sample-61f27ngda-sandhikas-projects.vercel.app/)
 
 ## Features
 
