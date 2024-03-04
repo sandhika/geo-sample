@@ -4,7 +4,7 @@
 /* eslint-disable no-trailing-spaces */
 
 import React, { useRef, useEffect, useState } from 'react';
-import maplibregl from '-gl';
+import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import classes from './GeoMap.module.css';
 
