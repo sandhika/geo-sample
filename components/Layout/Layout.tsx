@@ -7,15 +7,18 @@ import {
     Flex, 
     Space,
     Title, 
-    Text } from '@mantine/core';
+    Text,
+    Image
+} from '@mantine/core';
 import { Navbar } from '../Navbar/Navbar';
-
+import {useMobile} from '@/hooks/useMobile';
 interface rootProps {
     children:any
 }
 
 const RootLayout = ({ children }: rootProps) => {
     const [opened, { toggle }] = useDisclosure();
+    const isMobile = useMobile();
     return (
         <AppShell
             header={{ height: 60 }}
@@ -26,13 +29,10 @@ const RootLayout = ({ children }: rootProps) => {
             }}
             padding="md"
         >
-            <AppShell.Header>
-                <Burger
-                    opened={opened}
-                    onClick={toggle}
-                    hiddenFrom="sm"
-                    size="sm"
-                />
+            <AppShell.Header style={{
+                                 backgroundColor:"rgba(243, 243, 244, 0.6)",
+                             }}>
+
                 <Flex
                     mih={50}
                     gap="md"
@@ -41,11 +41,25 @@ const RootLayout = ({ children }: rootProps) => {
                     direction="row"
                     wrap="wrap"
                 >
-                    <Space w="xs" />
-                    <Avatar color="cyan" radius="xl">GS</Avatar>
+                    <Burger
+                        opened={opened}
+                        onClick={toggle}
+                        hiddenFrom="sm"
+                        size="sm"
+                    />
+
+                    {!isMobile?<Space w="xs" />:<></>}
+                    <Avatar radius="xl">
+                        <Image
+
+                            src="https://www.sinarwijayagroup.com/img/logo.png"
+                          />
+                    </Avatar>
+
+
                     <Title order={4}>
                         <Text inherit variant="gradient" component="span" gradient={{ from: 'pink', to: 'yellow' }}>
-                            GeoData Management System
+                            Sinar Wijaya Group Sample
                         </Text>
                     </Title>
                 </Flex>

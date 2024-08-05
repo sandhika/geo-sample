@@ -6,6 +6,7 @@
 
 import React, { useState, useRef } from 'react';
 import GeoMap from '@/components/GeoMap/GeoMap';
+import TrackMap from '@/components/TrackMap/TrackMap';
 import { 
   Box,
   Flex, 
@@ -27,33 +28,33 @@ function GeoMapPage() {
 
   return (
     <Box>
-      <Flex
-        mih={50}
-        gap="md"
-        justify="flex-start"
-        align="center"
-        direction="row"
-        wrap="wrap"
-      >
-        <FileButton resetRef={resetRef} onChange={setFile} accept="image/png,image/jpeg">
-          {(props) => <Button {...props}>Upload GeoData Json</Button>}
-        </FileButton>
-        <Button disabled={!file} color="red" onClick={clearFile}>
-          Reset
-        </Button>
+      {/*<Flex*/}
+      {/*  mih={50}*/}
+      {/*  gap="md"*/}
+      {/*  justify="flex-start"*/}
+      {/*  align="center"*/}
+      {/*  direction="row"*/}
+      {/*  wrap="wrap"*/}
+      {/*>*/}
+      {/*  */}{/*{/*<FileButton resetRef={resetRef} onChange={setFile} accept="image/png,image/jpeg">*/}
+      {/*  */}{/*{/*  {(props) => <Button {...props}>Upload GeoData Json</Button>}*/}
+      {/*  */}{/*{/*</FileButton>*/}
+      {/*  */}{/*{/*<Button disabled={!file} color="red" onClick={clearFile}>*/}
+      {/*  */}{/*{/*  Reset*/}
+      {/*  */}{/*{/*</Button>*/}
 
-        <Button color="green" >
-          Download Sample Route GeoJson
-        </Button>
+      {/*  */}{/*{/*<Button color="green" >*/}
+      {/*  */}{/*{/*  Download Sample Route GeoJson*/}
+      {/*  */}{/*{/*</Button>*/}
 
-      </Flex>
+      {/*</Flex>*/}
 
-      {file && (
-        <Text size="sm" mt="sm">
-          Picked file: {file.name}
-        </Text>
-      )}
-      <GeoMap/>
+      {/*{file && (*/}
+      {/*  <Text size="sm" mt="sm">*/}
+      {/*    Picked file: {file.name}*/}
+      {/*  </Text>*/}
+      {/*)}*/}
+      <TrackMap/>
     </Box>
   )
 }

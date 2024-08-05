@@ -7,6 +7,7 @@ import React, { useRef, useEffect, useState } from 'react';
 import maplibregl from 'maplibre-gl';
 import 'maplibre-gl/dist/maplibre-gl.css';
 import classes from './GeoMap.module.css';
+import Map, {Marker} from 'react-map-gl/maplibre';
 
 export default function GeoMap() {
   const mapContainer = useRef(null);
@@ -30,10 +31,15 @@ export default function GeoMap() {
     });
     mapGeo.addControl(new maplibregl.NavigationControl(), 'top-right');
 
+    var popup = new maplibregl.Popup()
+      .setText('Description')
+      .addTo(mapGeo);
+
     //add Marker
     new maplibregl.Marker({ color: "#FF0000" })
       .setLngLat([106.6768566, -6.314725])
-      .addTo(mapGeo);
+      .addTo(mapGeo)
+      .setPopup(popup);
     
     //add Source
    
@@ -102,6 +108,7 @@ export default function GeoMap() {
   return (
       <div className={classes.mapwrap}>
           <div ref={mapContainer} className={classes.map} />
+
       </div>
   );
 }

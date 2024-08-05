@@ -21,7 +21,7 @@ export function Navbar() {
 
             <NavLink
                 href="/geomap"
-                label="GeoData Map"
+                label="Map Tracking"
                 leftSection={<IconMap size="1rem" stroke={1.5} />}
                 rightSection={
                     <IconChevronRight size="0.8rem" stroke={1.5} className="mantine-rotate-rtl" />

@@ -38,3 +38,8 @@ This template comes with the following features:
 - `storybook` – starts storybook dev server
 - `storybook:build` – build production storybook bundle to `storybook-static`
 - `prettier:write` – formats all files with Prettier
+
+
+https://visgl.github.io/react-map-gl/docs/api-reference/popup
+
+Jgd9fFSFrjhTBVApszGLOdiA8RAMwNMJsC0wTx3L5ispF4YHOSX74BtK4sdDpKzn
