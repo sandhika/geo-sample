@@ -7,6 +7,7 @@
 import React, { useState, useRef } from 'react';
 import GeoMap from '@/components/GeoMap/GeoMap';
 import TrackMap from '@/components/TrackMap/TrackMap';
+import HistoryMap from '@/components/HistoryMap/HistoryMap';
 import { 
   Box,
   Flex, 
@@ -17,7 +18,7 @@ import {
 } from '@mantine/core';
 import {SearchableSelect} from "@/components/SearchableSelect/SearchableSelect";
 
-function GeoMapPage() {
+function TrackMapPage() {
   const [file, setFile] = useState<File | null>(null);
   const resetRef = useRef<() => void>(null);
 
@@ -29,7 +30,7 @@ function GeoMapPage() {
 
   return (
     <Box>
-       <Flex
+      <Flex
         mih={50}
         gap="md"
         justify="flex-start"
@@ -40,8 +41,14 @@ function GeoMapPage() {
           <Text>Plat : </Text>
           <SearchableSelect />
       </Flex>
-      <GeoMap/>
+
+      {/*{file && (*/}
+      {/*  <Text size="sm" mt="sm">*/}
+      {/*    Picked file: {file.name}*/}
+      {/*  </Text>*/}
+      {/*)}*/}
+      <HistoryMap/>
     </Box>
   )
 }
-export default GeoMapPage;
+export default TrackMapPage;

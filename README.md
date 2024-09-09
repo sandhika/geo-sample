@@ -43,3 +43,6 @@ This template comes with the following features:
 https://visgl.github.io/react-map-gl/docs/api-reference/popup
 
 Jgd9fFSFrjhTBVApszGLOdiA8RAMwNMJsC0wTx3L5ispF4YHOSX74BtK4sdDpKzn
+
+
+https://www.npmjs.com/package/react-map-gl-draw

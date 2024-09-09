@@ -1,5 +1,5 @@
 import { Badge, NavLink } from '@mantine/core';
-import { IconHome2, IconMap, IconChevronRight } from '@tabler/icons-react';
+import { IconHome2, IconMap, IconHistory,IconChevronRight } from '@tabler/icons-react';
 import { useRouter } from 'next/router';
 
 
@@ -20,14 +20,24 @@ export function Navbar() {
             />
 
             <NavLink
-                href="/geomap"
-                label="Map Tracking"
+                href="/trackmap"
+                label="Live Tracking"
                 leftSection={<IconMap size="1rem" stroke={1.5} />}
                 rightSection={
                     <IconChevronRight size="0.8rem" stroke={1.5} className="mantine-rotate-rtl" />
                 }
                 variant="filled"
-                active={router.pathname === "/geomap" ? true : false} 
+                active={router.pathname === "/trackmap" ? true : false}
+            />
+            <NavLink
+                href="/geomap"
+                label="History Tracking"
+                leftSection={<IconHistory size="1rem" stroke={1.5} />}
+                rightSection={
+                    <IconChevronRight size="0.8rem" stroke={1.5} className="mantine-rotate-rtl" />
+                }
+                variant="filled"
+                active={router.pathname === "/geomap" ? true : false}
             />    
         </>
     );
